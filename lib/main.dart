@@ -151,7 +151,7 @@ class _HomePageState extends State<HomePage> {
                                 padding: EdgeInsets.symmetric(vertical: 12),
                                 decoration: BoxDecoration(
                                   color:
-                                      Colors.blue, // Latar biru untuk tab aktif
+                                      Colors.blue,
                                   borderRadius: BorderRadius.only(
                                     topLeft: Radius.circular(8.0),
                                     topRight: Radius.zero,
