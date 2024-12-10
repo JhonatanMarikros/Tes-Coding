@@ -23,7 +23,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int currentIndex = 0;
 
-  // List of products
   final List<Map<String, String>> products = [
     {
       'name': 'HP 62 Black Ink Cartridge',
@@ -80,9 +79,9 @@ class _HomePageState extends State<HomePage> {
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(50.0),
           child: Container(
-            color: Colors.blue, // Latar belakang biru untuk navbar
+            color: Colors.blue, 
             padding: EdgeInsets.symmetric(
-                vertical: 8.0), // Menambahkan padding vertikal untuk jarak
+                vertical: 8.0),
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -115,22 +114,21 @@ class _HomePageState extends State<HomePage> {
             SizedBox(height: 16),
             Container(
               width: double
-                  .infinity, // Membuat box luar menyatu dengan lebar layar
+                  .infinity,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('image/1.png'), // Path gambar
-                  fit: BoxFit.cover, // Menyelaraskan gambar agar memenuhi box
+                  image: AssetImage('image/1.png'), 
+                  fit: BoxFit.cover,
                 ),
               ),
               padding: EdgeInsets.symmetric(
-                  vertical: 16.0), // Padding atas dan bawah
+                  vertical: 16.0), 
               child: Center(
-                // Membuat box dalam berada di tengah
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.white, // Latar putih untuk inner box
+                    color: Colors.white, 
                     borderRadius: BorderRadius.circular(
-                        8.0), // Sudut melengkung inner box
+                        8.0), 
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey.withOpacity(0.3),
@@ -139,22 +137,16 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ],
                   ),
-                  padding: EdgeInsets.all(16.0), // Padding dalam inner box
+                  padding: EdgeInsets.all(16.0), 
                   margin: EdgeInsets.symmetric(
-                      horizontal: 16.0), // Jarak dari sisi kanan/kiri layar
+                      horizontal: 16.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      // Tab Header
                       Row(
                         children: [
                           Expanded(
                             child: InkWell(
-                              onTap: () {
-                                setState(() {
-                                  // Logika untuk mengaktifkan tab "3-Step Easy Search"
-                                });
-                              },
                               child: Container(
                                 padding: EdgeInsets.symmetric(vertical: 12),
                                 decoration: BoxDecoration(
@@ -180,14 +172,13 @@ class _HomePageState extends State<HomePage> {
                             child: InkWell(
                               onTap: () {
                                 setState(() {
-                                  // Logika untuk mengaktifkan tab "Search by Serial Number"
                                 });
                               },
                               child: Container(
                                 padding: EdgeInsets.symmetric(vertical: 12),
                                 decoration: BoxDecoration(
                                   color: Colors.grey[
-                                      200], // Latar abu untuk tab tidak aktif
+                                      200], 
                                   borderRadius: BorderRadius.only(
                                     topRight: Radius.circular(8.0),
                                     topLeft: Radius.zero,
@@ -207,7 +198,6 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
 
-                      // Dropdown dan Tombol
                       Padding(
                         padding: EdgeInsets.all(16.0),
                         child: Column(
@@ -283,7 +273,6 @@ class _HomePageState extends State<HomePage> {
             ),
 
             SizedBox(height: 10),
-            // Featured Products Section
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Column(
@@ -316,15 +305,15 @@ class _HomePageState extends State<HomePage> {
                               final product = products[productIndex];
                               return Container(
                                 margin: EdgeInsets.symmetric(
-                                    horizontal: 12), // Perbaikan margin
+                                    horizontal: 12), 
                                 child: Card(
                                   elevation: 6,
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(15),
                                   ),
                                   child: SizedBox(
-                                    width: 200, // Sesuaikan lebar kontainer
-                                    height: 300, // Sesuaikan tinggi kontainer
+                                    width: 200,
+                                    height: 300,
                                     child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.stretch,
@@ -436,18 +425,15 @@ class _HomePageState extends State<HomePage> {
 
   Widget _buildNavbarItem(String title) {
     return InkWell(
-      onTap: () {
-        // Add navigation logic here
-      },
       child: Padding(
         padding: EdgeInsets.symmetric(
-            vertical: 8.0, horizontal: 4.0), // Adjusted padding
+            vertical: 8.0, horizontal: 4.0), 
         child: Text(
           title,
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
-            fontSize: 10.0, // Adjusted font size
+            fontSize: 10.0,
           ),
         ),
       ),
